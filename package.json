@@ -1,0 +1,41 @@
+{
+  "name": "emv",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon scr/index.js",
+    "start": "cross-env NODE_ENV=production node scr/index.js"
+  },
+  "keywords": [],
+  "author": "E&IS",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "@popperjs/core": "^2.1.1",
+    "bootstrap": "^4.4.1",
+    "chart.js": "^2.9.3",
+    "connect-flash": "^0.1.1",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
+    "datatables.net": "^1.10.20",
+    "datatables.net-dt": "^1.10.20",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.1",
+    "express-session": "^1.17.0",
+    "fs-extra": "^9.0.0",
+    "jquery": "^3.4.1",
+    "jquery.easing": "^1.4.1",
+    "leaflet": "^1.6.0",
+    "leaflet.markercluster": "^1.4.1",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "pg": "^7.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "description": ""
+}

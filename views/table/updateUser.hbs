@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="/css/cards.css">
+<div class="col-md-6 mx-auto">
+    <div class="card">
+        <div class="card-body">
+            {{#if patient}}
+                <form action="/{{patient.id}}" method="POST">
+                    <div class="form-group">
+                        <h2 type="text">{{patient.namep}}</h2>
+                    </div>
+                    <div><h4 type="text">{{patient.type_id}} {{patient.id}}</h></div>
+                    <div><h4 type="text">Edad : {{patient.age}}</h></div>
+                    <div><h4 type="text">Sexo : {{patient.sex}}</h></div>
+                    <div><h4 type="text">Riesgo : {{patient.risk}}</h></div>
+                    <div class="input-group">
+                        <h4 type="text">Estado : </h4>
+                        <div class="form-group input-group-prepend" style="width : 100px" >
+                            <select class="form-control" name="sel1" id="sel1">
+                                <option>{{Pemer.condition}}</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>7</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="recom" rows="2" class="form-control" placeholder="Recomendaciones">{{patient.recommendations}}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-success btn-block">
+                            Save
+                        </button>
+                    </div>
+                </form>
+            {{/if}}
+            {{#if emer1}}
+                <form action="/edit/{{Pemer.id}}" method="POST">
+                    <div class="form-group">
+                        <h2 type="text">{{Pemer.namep}}</h2>
+                    </div>
+                    <div><h4 type="text">{{Pemer.type_id}} {{Pemer.id}}</h></div>
+                    <div><h4 type="text">Edad : {{Pemer.age}}</h></div>
+                    <div><h4 type="text">Sexo : {{Pemer.sex}}</h></div>
+                    <div><h4 type="text">Riesgo : {{Pemer.risk}}</h></div>
+                    <br />
+                    <select class="form-control" name="estado" id="estado">
+                      <option>{{Pemer.condition}}</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>7</option>
+                    </select>
+                  </div>
+                    <div class="login-box"><h3>Emergencia</h3>
+                        <label class="Radio"><h4>Pendiente</h4>
+                            <input type="Radio" name="op" value='true'>
+                            <span class="checkmark"></span> 
+                        </label>
+                        <br />
+                        <label class="Radio"><h4>Atendida</h4>
+                            <input  type="Radio" name="op" value='false'>
+                            <span class="checkmark"></span> 
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="recom" rows="2" class="form-control" placeholder="Recomendaciones">{{patient.recommendations}}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-success btn-block">
+                            Save
+                        </button>
+                    </div>
+                </form>
+            {{/if}}    
+        </div>
+    </div>
+</div>

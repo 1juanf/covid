@@ -1,0 +1,188 @@
+<div class="container-fluid">
+  <!-- Page Heading -->
+  <br>
+  <div class="d-sm-flex align-items-center justify-content-between mb-5">
+    <h1 class="h3 mb-0 text-gray-800">Central {{users.nickname}}</h1>
+    {{!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> --}}
+  </div>
+
+  <!-- Content Row -->
+  <div class="row">
+    <!-- Earnings (Monthly) Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Personas registradas</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800">{{patient.length}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-left-warning shadow h-100 py-2">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+              <div class="dropdown no-arrow mb-1" style="margin-right: 15px">
+                  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                    <div class="dropdown-header">Opciones:</div>
+                    <a class="dropdown-item" href="/mapc">Mapa</a>
+                    <a class="dropdown-item" href="/tablec">Tabla</a>
+                  </div>
+                </div>
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-wrning text-uppercase mb-1">Contagiados</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800">{{sta.cont}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-left-success shadow h-100 py-2">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+              <div class="dropdown no-arrow mb-1" style="margin-right: 15px">
+                  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                    <div class="dropdown-header">Opciones:</div>
+                    <a class="dropdown-item" href="/mapR">Mapa</a>
+                    <a class="dropdown-item" href="/tableR">Tabla</a>
+                  </div>
+                </div>  
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-wrning text-uppercase mb-1">Recuperados</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800">{{sta.reco}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-left-danger shadow h-100 py-2">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+             <div class="dropdown no-arrow mb-1" style="margin-right: 15px">
+                  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                    <div class="dropdown-header">Opciones:</div>
+                    <a class="dropdown-item" href="/mapMc">Mapa</a>
+                    <a class="dropdown-item" href="/tableMc">Tabla</a>
+                  </div>
+                </div>
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Pacientes mayores de 60 años contagiados</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800">{{sta.conh}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Earnings (Monthly) Card Example -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-left-danger shadow h-100 py-2">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+             <div class="dropdown no-arrow mb-1" style="margin-right: 15px">
+                  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                    <div class="dropdown-header">Opciones:</div>
+                    <a class="dropdown-item" href="/mapmc">Mapa</a>
+                    <a class="dropdown-item" href="/tablemc">Tabla</a>
+                  </div>
+                </div>
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Menores de edad contagiados</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800">{{sta.conl}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-left-danger shadow h-100 py-2">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+             <div class="dropdown no-arrow mb-1" style="margin-right: 15px">
+                  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                    <div class="dropdown-header">Opciones:</div>
+                    <a class="dropdown-item" href="/mapt">Mapa</a>
+                    <a class="dropdown-item" href="/tablet">Tabla</a>
+                  </div>
+                </div>
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">En tratamiento</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800">{{sta.trat}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+  <div class="row">
+    <div class="col-xl-3 col-md-6 mb-2">
+      <div class="card border-left-warning shadow h-100 py-2">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="dropdown no-arrow mb-1" style="margin-right: 15px">
+                  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                    <div class="dropdown-header">Opciones:</div>
+                    <a class="dropdown-item" href="/mapp">Mapa</a>
+                    <a class="dropdown-item" href="/tablep">Tabla</a>
+                  </div>
+                </div>
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-wrning text-uppercase mb-1">Posibles Contagiados</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800">{{sta.posc}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-xl-4 col-lg-5">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">Usuatrios ingresados</h6>
+        </div>
+        <div class="card-body">
+          <h4 class="small font-weight-bold">Porcentaje de la población<span class="float-right">{{por}}%</span></h4>
+          <div class="progress mb-4">
+            <div class="progress-bar bg-danger" role="progressbar" style="width: {{por}}%" aria-valuenow="{{por}}" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>   
+    </div>
+  </div>
+</div>
+
+
+
+

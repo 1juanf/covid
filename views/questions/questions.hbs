@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/css/questions.css">
+
+<div class="container-fluid">
+	<div class="wrap">
+		<h2>{{ patient.namep }}</h2>
+		<a class="btn btn-secondary" href="/port/port" >Cerrar</a>
+		<form class="formulario" action="/query/insert" method="POST">
+			<div class="checkbox">
+				<h5>Sintomas</h5>
+				<input type="checkbox" name="tos" id="tos">
+				<label for="tos">Tos seca</label>
+				<br>
+				<input type="checkbox" name="throat" id="throat">
+				<label for="throat">Dolor de garganta</label>
+				<br>
+				<input type="checkbox" name="breathing" id="breathing">
+				<label for="breathing">Dificultad respiratoria</label>
+				<br>
+				{{!-- <input type="checkbox" name="checkbox4" id="checkbox4">
+				<label for="checkbox4">Malestar general</label>
+				<br> --}}
+				<input type="checkbox" name="fatigue" id="fatigue">
+				<label for="fatigue">Fatiga</label>
+				<br>
+				<input type="checkbox" name="taste" id="taste">
+				<label for="taste">Perdida del gusto y/o del olfato</label>
+				<br>
+				<input type="checkbox" name="head" id="head">
+				<label for="head">Dolor de cabeza</label>
+			</div>
+			<div class="form-grup">
+				<button type="submit" class="btn btn-primary">Guardar cambios</button>
+			</div>
+		</form>
+	</div>
+</div>

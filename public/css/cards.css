@@ -1,0 +1,85 @@
+div.body {
+    background: #1488CC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height:100px;
+    width: 100%;   
+    display:flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   div.card {
+     /* border-left: 6px solid blue; */
+     margin: 30px 30px 30px 30px;
+     background-color: rgba(165, 213, 253, 0.795);
+     border-radius: 5px;
+   }
+
+   div.card1 {
+    /* border-left: 6px solid blue; */
+    margin: 30px 30px 30px 30px;
+    background-color: rgba(174, 201, 223, 0.795);
+   
+  }
+   
+   .logo {
+    width: 30%;
+   }
+  
+.login-box .Radio{
+  display: block;
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.login-box .Radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.login-box .Radio:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.login-box .Radio input:checked ~ .checkmark {
+  background-color: rgb(34, 144, 218);
+}
+
+.login-box .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.login-box .Radio input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.login-box .Radio .checkmark:after {
+ 	top: 7px;
+	left: 7px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: white;
+}
+
+.login-box .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+   

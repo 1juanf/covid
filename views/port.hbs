@@ -1,0 +1,136 @@
+<link rel="stylesheet" href="/css/popup.css">
+<link rel="stylesheet" href="/css/questions.css">
+<!-- Begin Page Content -->
+<div class="container-fluid">
+  <!-- Page Heading -->
+  <h1 class="h3 mb-2 text-gray-800">Tabla</h1>
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h3 class="m-0 font-weight-bold text-primary">Usuarios {{rep.length}}</h3>
+       <button id="btn-abrir-popup" class="btn btn-primary" style='width:100px; height:40px'>ingresar</button>
+     <div class="row">
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Id</th>
+              <th>tempertura</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Nombre</th>
+              <th>Id</th>
+              <th>Temperatura</th>
+            </tr>
+          </tfoot>
+          <tbody>
+            {{#each rep }}      
+            <tr>
+                <td>{{ namep }}</td>
+                <td>{{ id }}</td>
+                <td> 
+                  <form action="/port/{{id}}" method="post" >
+                    <div class="row">
+                      <input style="width : 60px" type="text" class="form-control" name="temp" placeholder="{{ s_temperature }}">
+                      &nbsp;&nbsp;&nbsp;
+                      <input class="btn btn-primary" name= "Save" type="submit" value="Save">
+                    </div>
+                  </form>
+                </td>                   
+              </tr>
+              {{else}}
+            {{/each}}
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  	<div class="overlay" id="overlay">
+			<div class="popup" id="popup">
+				<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+				<h4>INGRESAR</h4>
+				<h5>Nuevo usuario</h5>
+        <div class="container-fluid">
+          <div class="wrap">
+            <form class="formulario" action="/insert/add" method="POST">
+              <div class="contenedor-inputs">
+                <input type="text" name="namep" id="namep" placeholder="Nombre" style="width: 100%; text-align: center;">
+                <div class="input-group">
+                  <div class="form-group input-group-prepend" style="width : 100px" >
+                    <select class="form-control" name="type" id="type">
+                      <option>CC.</option>
+                      <option>Pasaporte</option>
+                      <option>CC. extrangería</option>
+                    </select>
+                  </div>
+                  <input class="form-control" name="id_c" type="text" placeholder="Documento" style="padding-left: 310px; padding-top: 10px; padding-bottom: 10px;"> 
+                </div>
+                <input type="text" name="tell" placeholder="Teléfono" style="width: 100%; text-align: center;">
+                <input type="text" name="old" placeholder="Edad" style="width: 30%; text-align: center;">
+                <div class="radio">
+                  <input type="radio" name="sex" id="M" value="m">
+                  <label for="M">Masculino</label>
+                  <input type="radio" name="sex" id="F" value="f">
+                  <label for="F">Femenino</label>
+                </div>
+                <div class="checkbox">
+                  <h5>Riesgos</h5>
+                  <p>Padese de Problemas</p>
+                
+                  <input type="checkbox" name="risk1" id="risk1">
+                  <label for="risk1">Cardiacos</label>
+          
+                  <input type="checkbox" name="risk2" id="risk2">
+                  <label for="risk2">respiratorios</label>
+        
+                  <input type="checkbox" name="risk3" id="risk3">
+                  <label for="risk3">Diabetes</label>
+          
+                  <input type="checkbox" name="risk4" id="risk4">
+                  <label for="risk4">Hipertensión arterial</label>
+
+                </div>
+                <div class="checkbox">
+                  <h5>Sintomas</h5>
+                  <input type="checkbox" name="symp0" id="symp0">
+                  <label for="symp0">Fiebre</label>
+
+                  <input type="checkbox" name="symp1" id="symp1">
+                  <label for="symp1">Tos seca</label>
+          
+                  <input type="checkbox" name="symp2" id="symp2">
+                  <label for="symp2">Dolor de garganta</label>
+                  
+                  <input type="checkbox" name="symp3" id="symp3">
+                  <label for="symp3">Dolor de cabeza</label>
+          
+                  {{!-- <input type="checkbox" name="symp4" id="symp4">
+                  <label for="symp4">Malestar general</label> --}}
+                  
+                  <input type="checkbox" name="symp4" id="symp4">
+                  <label for="symp4">Perdida del gusto y/o del olfato</label>
+
+                  <input type="checkbox" name="symp5" id="symp5">
+                  <label for="symp5">Dificultad respiratoria</label>
+
+                  <input type="checkbox" name="symp6" id="symp6">
+                  <label for="symp6">Fatiga</label>
+
+                </div>
+              </div>
+              <input type="submit" class="btn-submit" value="Guardar">
+            </form>
+          </div>
+        </div>
+			</div>
+		</div>
+</div>
+
+<script src="/js/popup.js"></script>
